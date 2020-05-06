@@ -1,0 +1,28 @@
+<select #classe (change)="0">
+    <option value="alert-success">sucesso</option>
+    <option value="alert-info">info</option>
+    <option value="alert-warning">alerta</option>
+    <option value="alert-danger">perigo</option>
+  </select>
+  <br><br>
+  
+  <div class="alert {{ classe.value }}" role="alert">
+    Texto colorido conforme valor do combobox.
+  </div>
+  
+  <div class="alert alert-danger" role="alert" [style.display]="classe.value == 'alert-danger' ? 'block' :'none'">
+    Esse texto só aparece em caso de erro.
+  </div>
+  
+  <div class="alert " role="alert" [class.alert-success]="classe.value == 'alert-success'">
+    A simple success alert—check it out!
+  </div>
+  <div class="alert " role="alert" [class.alert-info]="classe.value == 'alert-info'">
+    A simple danger alert—check it out!
+  </div>
+  <div class="alert " role="alert" [class.alert-warning]="classe.value == 'alert-warning'">
+    A simple warning alert—check it out!
+  </div>
+  <div class="alert " role="alert" [class.alert-danger]="classe.value == 'alert-danger'">
+    A simple info alert—check it out!
+  </div>
