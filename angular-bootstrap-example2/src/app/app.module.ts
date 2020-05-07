@@ -10,7 +10,8 @@ import { InputPropertiesComponent } from './input-properties/input-properties.co
 import { DataBindingComponentComponent } from './data-binding-component/data-binding-component.component';
 import { OutputPropertiesComponent } from './output-properties/output-properties.component';
 import { CicloComponent } from './ciclo/ciclo.component';
-import { DiretivaIfComponent } from './diretiva-if/diretiva-if.component';
+import { DiretivaNgifComponent } from './diretiva-ngif/diretiva-ngif.component';
+import { DiretivaNgswitchComponent } from './diretiva-ngswitch/diretiva-ngswitch.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { DiretivaIfComponent } from './diretiva-if/diretiva-if.component';
     DataBindingComponentComponent,
     OutputPropertiesComponent,
     CicloComponent,
-    DiretivaIfComponent
+    DiretivaNgifComponent,
+    DiretivaNgswitchComponent
   ],
   imports: [
     BrowserModule,

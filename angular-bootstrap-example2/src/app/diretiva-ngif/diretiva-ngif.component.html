@@ -1,0 +1,38 @@
+<h5>rwrwe</h5>
+
+<div *ngIf="cursos.length > 0; else emptyCourses">
+    Lista de Cursos
+</div>
+
+<ng-template #emptyCourses>
+    Não existem cursos para serem listados.
+</ng-template>
+
+<div *ngIf="mostrarCursos; else showCursos">
+    Lista de Cursos aqui.
+</div>
+
+<div>
+    <ng-template #showCursos>
+        Não existem cursos para serem listados.
+    </ng-template>
+</div>
+
+<div *ngIf="mostrarCursos; else showCursos">
+    Lista de Cursos aqui.
+</div>
+
+<div hidden="mostrarCursos">
+    Lista de Cursos aqui.
+</div>
+
+<div>
+    <ng-template #showCursos>
+        Não existem cursos para serem listados.
+    </ng-template>
+</div>
+
+
+
+
+<button (click)="onMostrarCursos()"> </button>
