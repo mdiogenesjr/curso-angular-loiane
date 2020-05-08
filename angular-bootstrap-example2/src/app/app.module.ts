@@ -12,6 +12,11 @@ import { OutputPropertiesComponent } from './output-properties/output-properties
 import { CicloComponent } from './ciclo/ciclo.component';
 import { DiretivaNgifComponent } from './diretiva-ngif/diretiva-ngif.component';
 import { DiretivaNgswitchComponent } from './diretiva-ngswitch/diretiva-ngswitch.component';
+import { DiretivaNgforComponent } from './diretiva-ngfor/diretiva-ngfor.component';
+import { DiretivaNgclassComponent } from './diretiva-ngclass/diretiva-ngclass.component';
+import { DiretivaNgstyleComponent } from './diretiva-ngstyle/diretiva-ngstyle.component';
+import { OperadorElvisComponent } from './operador-elvis/operador-elvis.component';
+import { ContentComponent } from './content/content.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +29,12 @@ import { DiretivaNgswitchComponent } from './diretiva-ngswitch/diretiva-ngswitch
     OutputPropertiesComponent,
     CicloComponent,
     DiretivaNgifComponent,
-    DiretivaNgswitchComponent
+    DiretivaNgswitchComponent,
+    DiretivaNgforComponent,
+    DiretivaNgclassComponent,
+    DiretivaNgstyleComponent,
+    OperadorElvisComponent,
+    ContentComponent
   ],
   imports: [
     BrowserModule,
