@@ -22,6 +22,9 @@ import { FundoAmareloDirective } from './shared/fundo-amarelo.directive';
 import { DiretivasCustomizadasComponent } from './diretivas-customizadas/diretivas-customizadas.component';
 import { HighlightMouseDirective } from './shared/highlight-mouse.directive';
 import { HighlightDirective } from './shared/highlight.directive';
+import { CriarCursoModule } from './criar-curso/criar-curso.module';
+import { CursosModule } from './cursos/cursos.module';
+
 
 @NgModule({
   declarations: [
@@ -48,9 +51,10 @@ import { HighlightDirective } from './shared/highlight.directive';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    CursosModule,
+    CriarCursoModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
