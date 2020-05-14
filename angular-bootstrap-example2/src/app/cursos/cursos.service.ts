@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 
-@Injectable({
+@Injectable(/*{
   providedIn: 'root'
-})
+}*/)
 export class CursosService {
 
   cursos: string[] = ['java','kotlin'];
