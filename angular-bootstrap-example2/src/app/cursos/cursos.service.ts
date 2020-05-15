@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 
 @Injectable(/*{
   providedIn: 'root'
@@ -6,6 +6,8 @@ import { Injectable } from '@angular/core';
 export class CursosService {
 
   cursos: string[] = ['java','kotlin'];
+  emitirCursoCriado = new EventEmitter<string>();
+  static criouNovoCurso = new EventEmitter<string>();
 
   constructor() { }
 
@@ -15,5 +17,7 @@ export class CursosService {
 
   addCursos(curso:string){
     this.cursos.push(curso);
+    this.emitirCursoCriado.emit(curso);
+    CursosService.criouNovoCurso.emit(curso);
   }
 }

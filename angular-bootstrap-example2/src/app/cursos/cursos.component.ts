@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter } from '@angular/core';
 import { CursosService } from './cursos.service';
 
 @Component({
@@ -15,10 +15,11 @@ export class CursosComponent implements OnInit {
 
   ngOnInit() {
     this.cursos = this.cursosService.getCursos();
+    CursosService.criouNovoCurso.subscribe(
+      curso => this.cursos.push(curso)
+    );
   }
 
-  addCurso(curso:string){
-    this.cursosService.addCursos(curso);
-  }
+ 
 
 }
