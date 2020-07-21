@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -24,6 +24,12 @@ import { HighlightMouseDirective } from './shared/highlight-mouse.directive';
 import { HighlightDirective } from './shared/highlight.directive';
 import { CriarCursoModule } from './criar-curso/criar-curso.module';
 import { CursosModule } from './cursos/cursos.module';
+import { ExemplosPipeComponent } from './exemplos-pipe/exemplos-pipe.component';
+import { CamelCasePipe } from './camel-case.pipe';
+import { registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt';
+
+registerLocaleData(localePt, 'pt-BR');
 
 
 @NgModule({
@@ -47,13 +53,21 @@ import { CursosModule } from './cursos/cursos.module';
     FundoAmareloDirective,
     DiretivasCustomizadasComponent,
     HighlightMouseDirective,
-    HighlightDirective
+    HighlightDirective,
+    ExemplosPipeComponent,
+    CamelCasePipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
     CursosModule,
     CriarCursoModule
+  ],
+  providers:[
+    {
+      provide: LOCALE_ID,
+      useValue: 'pt-BR'
+    }
   ],
   bootstrap: [AppComponent]
 })

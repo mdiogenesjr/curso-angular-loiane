@@ -1,0 +1,18 @@
+<p>exemplos-pipe works!</p>
+
+<p>{{ livro.titulo | uppercase | lowercase | camelCase}}</p>
+<p>{{ livro.rating | number: '1.1-2'}}</p>
+<p>{{ livro.preco | currency:'BRL' : true}}</p>
+<p>{{ livro.dataLancamento | date:'dd-MM-yyyy'}}</p>
+
+<p>{{ livro | json}}</p>
+
+<input type="text" [(ngModel)]="filtro"/>
+
+<ul>
+    <li *ngFor="let item of obterCursos()" >
+        {{ item }}
+    </li>
+</ul>
+
+<input type="text" value="{{ valorAsync | async}}" />
